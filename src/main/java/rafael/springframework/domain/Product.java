@@ -11,7 +11,7 @@ import java.math.BigDecimal;
 import java.util.UUID;
 
 @Data
-@Table("tb_products")
+@Table("tb_product")
 public class Product implements Serializable {
     @PrimaryKey
     @CassandraType(type = DataType.Name.UUID)

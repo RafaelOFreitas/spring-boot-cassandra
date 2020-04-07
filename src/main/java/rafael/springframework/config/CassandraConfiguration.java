@@ -11,7 +11,7 @@ import java.util.List;
 
 @Configuration
 public class CassandraConfiguration extends AbstractCassandraConfiguration {
-    public static final String KEYSPACE = "db_keyspace";
+    public static final String KEYSPACE = "db_example";
 
     @Override
     public SchemaAction getSchemaAction() {
@@ -38,5 +38,10 @@ public class CassandraConfiguration extends AbstractCassandraConfiguration {
     @Override
     public String[] getEntityBasePackages() {
         return new String[]{"rafael.springframework.domain"};
+    }
+
+    @Override
+    protected boolean getMetricsEnabled() {
+        return false;
     }
 }
